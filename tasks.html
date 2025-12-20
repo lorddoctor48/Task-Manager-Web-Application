@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="styles/tasks-style.css">
+    <link rel="stylesheet" href="styles/general-style.css">
+    <script defer src="JS/tasks.js"></script>
+    <script defer src="JS/dark-mode.js"></script>
+</head>
+
+<body>
+
+    <header class="tasks-header-wrapper">
+        <a href="home.html" class="logo-button" role="button" aria-label="Go to home" title="Go to home">
+            <img src="images/GE_Logo-inline-on-white.png" width="543" height="114" alt="Gelos logo">
+        </a>
+        <h1>Tasks</h1>
+        <nav class="main-nav">
+            <a href="tasks.html">Task </a>
+            <a href="contact.html"> Contact</a>
+        </nav>
+        <button id="dark-toggle" aria-label="Dark Mode Toggle">Light-Dark</button>
+    </header>
+
+    <div class="tasks-wrapper">
+        <form id="add-task-form" class="add-task-form">
+            <h2>Add a new task</h2>
+            <fieldset>
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" name="task-name" required>
+
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="due-date" required>
+
+                <label for="priority-level">Priority Level:</label>
+                <select id="priority-level" name="priority-level" required>
+                    <option value="">-- Select Priority --</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </fieldset>
+            <fieldset class="consultant-subform">
+                <p class="consultant-label">Consultant</p>
+
+                <label for="consultant-search">Search Consultant:</label>
+                <input type="text" id="consultant-search" placeholder="Type to filter consultants...">
+
+                <label for="consultant">Select Consultant:</label>
+                <select id="consultant" name="consultant"></select>
+            </fieldset>
+            <button type="submit" id="btn-add-task">Save Task</button>
+        </form>
+        <div class="second-functionality-row-wrapper">
+            <form id="search-task" class="search-task-form">
+                <fieldset>
+                    <label for="search-name">Search Task by Name:</label>
+                    <input type="text" id="search-name" name="search-name" required>
+                    <button type="submit" id="search-button">Search Task</button>
+                </fieldset>
+            </form>
+            <button type="button" id="display-all-tasks">Display All Tasks</button>
+            <button type="button" id="clear-tasks-list">Clear Tasks Table</button>
+        </div>
+        <div class="task-list-wrapper ">
+            <div id="task-list" class="task-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Due Date</th>
+                            <th>Priority Level</th>
+                            <th>Consultant</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <p> <a target="_blank"
+                    href="https://share.tafensw.edu.au/share/file/5f1cec7b-1d03-446a-85b7-edb42692c34e/1/GE_Privacy-policy.pdf">
+                    Privacy Policy (pdf)</a></p>
+            <p> <a target="_blank"
+                    href="https://share.tafensw.edu.au/share/file/5f1cec7b-1d03-446a-85b7-edb42692c34e/1/GE_Internet-usage-policy.pdf">
+                    Internet Usage Policy (pdf)</a></p>
+        </div>
+        <p> &copy;2025 Gelo Enterprises</p>
+    </footer>
+</body>
+
+</html>

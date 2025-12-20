@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "styles/general-style.css">
+    <link rel = "stylesheet" href = "styles/contact-style.css">
+    <script defer src="JS/dark-mode.js"></script>
+    <script defer src="JS/contact.js"></script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <header class="contact-header-wrapper">
+        <a href="home.html" class="logo-button" role="button" aria-label="Go to home" title="Go to home">
+            <img src="images/GE_Logo-inline-on-white.png" width="543" height="114" alt="Gelos logo">
+        </a>
+
+        <h1>Contact</h1>
+        <nav class="main-nav">
+            <a href="tasks.html">Task </a>
+            <a href="contact.html"> Contact</a>
+        </nav>
+        <button id="dark-toggle" aria-label="Dark Mode Toggle">Light-Dark</button>
+    </header>
+    <div class="contact-content">
+        <img src="images/AdobeStock_355811661.jpeg" width="775" height="555" alt="Contact Us Image">
+        <div class="contact-form">
+            <form id="contact-form" class="contact-form">
+                <h2>Contact us</h2>
+                <fieldset>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+                <fieldset>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="10" required></textarea>
+                </fieldset>
+                <button type="submit" id ="submit-contact">Send</button>
+            </form>
+        </div>
+    </div>
+        <footer>
+        <div class="footer-links">
+            <p> <a target="_blank"
+                    href="https://share.tafensw.edu.au/share/file/5f1cec7b-1d03-446a-85b7-edb42692c34e/1/GE_Privacy-policy.pdf">
+                    Privacy Policy (pdf)</a></p>
+            <p> <a target="_blank"
+                    href="https://share.tafensw.edu.au/share/file/5f1cec7b-1d03-446a-85b7-edb42692c34e/1/GE_Internet-usage-policy.pdf">
+                    Internet Usage Policy (pdf)</a></p>
+        </div>
+        <p> &copy;2025 Gelo Enterprises</p>
+    </footer>
+</body>
+
+</html>

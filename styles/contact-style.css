@@ -1,0 +1,104 @@
+.contact-header-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2em;
+    max-width: 2200px;
+    flex-direction: row;
+    padding: 0.15em 0.8em;
+}
+
+.contact-content {
+    display: grid;
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1100px;
+    padding: 0.15em 0.8em;
+    box-sizing: border-box;
+    align-items: start;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2em;
+}
+
+.contact-form fieldset {
+    font-size: 22px;
+    border: none;
+    padding: 0.15em 0.8em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: 'Calibri', Candara, 'Segoe UI', Optima, Arial, sans-serif;
+    
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 0.30em 0.16em;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: #000;
+    font-family: 'Calibri', Candara, 'Segoe UI', Optima, Arial, sans-serif;
+    border: 1px solid #666;
+    border-radius: 6px;
+}
+
+body.dark-theme.contact-form input{
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #666; 
+}
+
+body.dark-theme .contact-form fieldset {
+    background-color: #333;
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-theme .contact-form button {
+    background-color: #555;
+    color: #fff;
+}
+
+.contact-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 100px; 
+    align-self: flex-start;
+
+}
+
+.contact-form form {
+    text-align: center;
+}
+
+.contact-form button {
+    border-radius: 6px;
+    font-size: 22px;
+    margin: 1rem auto 0 auto;
+    display: block;
+    padding: 0.5em;
+    color: black;
+    font-family: 'Calibri', Candara, 'Segoe UI', Optima, Arial, sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-content img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .home-instructions {
+        width: 100%;
+    }
+}
