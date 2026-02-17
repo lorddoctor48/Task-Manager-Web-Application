@@ -231,7 +231,7 @@ function addTaskButtonClick(event) { //Function to handle add task button click 
 
     localStorage.setItem("tasks", JSON.stringify(tasks)); // Save updated array to localStorage
 
-    console.log("Saving to localStorage now...");
+    console.log("Saving to localStorage now..."); //Prints an indicator in the browser's console
 
     console.log(tasks); //This logs the tasks array to the console for debugging purposes
     taskForm.reset();   //Resets the form inputs after clicking the add task button
