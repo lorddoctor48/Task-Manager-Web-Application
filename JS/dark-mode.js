@@ -16,14 +16,20 @@ const darkModeToggle = document.querySelector("#dark-toggle");
  * @event click
  * @returns {void}
  */
-darkModeToggle.addEventListener("click", () => { //Event listener for dark mode toggle button
-    if (document.body.classList.contains("dark-theme")) { //Check if dark mode is currently active
 
+
+// Load saved theme on startup
+const savedTheme = localStorage.getItem("dark-theme-mode"); //variable for saving user's theme preferences to local storage
+if (savedTheme === "true") {
+    document.body.classList.add("dark-theme"); //Add dark mode class to body
+}
+
+darkModeToggle.addEventListener("click", () => { //Event listener for dark mode toggle button
+    if (document.body.classList.contains("dark-theme")) {  //Check if dark mode is currently active
         document.body.classList.remove("dark-theme"); //Remove dark mode class from body
-        localStorage.setItem("dark-theme-mode", false); //Store preference in localStorage
-    } 
-    else {
+        localStorage.setItem("dark-theme-mode", "false"); //Store preference in localStorage
+    } else {
         document.body.classList.add("dark-theme"); //Add dark mode class to body
-        localStorage.setItem("dark-theme-mode", true); //Store preference in localStorage
+        localStorage.setItem("dark-theme-mode", "true"); //Store preference in localStorage
     }
 });

@@ -116,7 +116,9 @@ var consultantsRoleName = [
  * @type {Array<{taskName:string, dueDate:string, priority:string, consultant:string, completed:boolean}>}
  */
 
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+// let tasks = [];
 
 /**
  * Form element used to add new tasks.
@@ -226,6 +228,10 @@ function addTaskButtonClick(event) { //Function to handle add task button click 
     let consultant = consultantSelect.value; //Stores the value of consultant input
 
     tasks.push({taskName,dueDate,priority,consultant,completed: false}); //Creates a new task record and adds it to the tasks array
+
+    localStorage.setItem("tasks", JSON.stringify(tasks)); // Save updated array to localStorage
+
+    console.log("Saving to localStorage now...");
 
     console.log(tasks); //This logs the tasks array to the console for debugging purposes
     taskForm.reset();   //Resets the form inputs after clicking the add task button
