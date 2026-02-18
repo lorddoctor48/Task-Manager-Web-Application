@@ -156,7 +156,7 @@ const consultantSelect = document.querySelector('#consultant');
  */
 const consultantSearch = document.querySelector('#consultant-search');
 
-/**
+/**yhjh
  * Button used to add a new task.
  * @type {HTMLButtonElement}
  */
@@ -409,6 +409,10 @@ function clearTaskTableClick() { //Function to handle the clear task table butto
 function renderTasks(taskArray) { //Function to render a list of tasks into the table body
     tasksTbody.innerHTML = ""; //Clear existing rows in the table body
 
+    if (tasks.length === 0) { //Checks whether the tasks array is empty
+        alert("No tasks found."); //Displays a message for no tasks found when clicking "Display All Tasks" button
+    }
+
     taskArray.forEach((task, index) => { //Iterate over each task in the provided task array
         let row = document.createElement("tr"); //Create a new table row element
 
@@ -431,7 +435,6 @@ function renderTasks(taskArray) { //Function to render a list of tasks into the 
         `;
 
         tasksTbody.appendChild(row);  //Add the populated row to the table body
-
     });
 }
 
@@ -442,8 +445,9 @@ function renderTasks(taskArray) { //Function to render a list of tasks into the 
  */
 function toggleTaskCompletion(index) { //Function to toggle the completion status of a task
     tasks[index].completed = !tasks[index].completed; //Toggle the completed status of the task at the specified index
+    localStorage.setItem("tasks", JSON.stringify(tasks)); //Saves the modified tasks array into local storage
     displayButtonClick(); //Refresh the task display to reflect the updated status
-    console.log("task marked completed") //Log a message indicating the task completion status was toggled
+    console.log("Marked completed check box clicked") //Log a message indicating the task completion status was toggled
 }
 
 /**
@@ -453,6 +457,8 @@ function toggleTaskCompletion(index) { //Function to toggle the completion statu
  */
 function deleteTask(index) { //Function to delete a task from the tasks array
     tasks.splice(index, 1); //Remove the task at the specified index from the tasks array
+    localStorage.setItem("tasks", JSON.stringify(tasks)); //Saves the modified tasks array into local storage
     displayButtonClick(); //Refresh the task display to reflect the deletion
     console.log("task deleted"); //Log a message indicating a task was deleted
+
 }
